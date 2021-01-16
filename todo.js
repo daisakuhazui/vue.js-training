@@ -8,6 +8,16 @@ const vm = new Vue({
         { title: 'ピザを注文する', isChecked: false },
         { title: '参加費のお釣りを準備する', isChecked: false },
         { title: '会場設営をする', isChecked: false },
-    ]
+    ],
+    newItemTitle: ''
   },
+  methods: {  //methodsオプションをまるっと追加
+    addTodo: function(){
+      this.items.push({
+        title: this.newItemTitle,
+        isChecked: false
+      });
+      this.newItemTitle = '';
+    },
+  }
 })
