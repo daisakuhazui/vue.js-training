@@ -11,13 +11,18 @@ const vm = new Vue({
     ],
     newItemTitle: ''
   },
-  methods: {  //methodsオプションをまるっと追加
+  methods: {
     addTodo: function(){
       this.items.push({
         title: this.newItemTitle,
         isChecked: false
       });
       this.newItemTitle = '';
+    },
+    deleteTodo: function(){
+      this.items = this.items.filter(function (item) {
+        return item.isChecked === false; //
+      });
     },
   }
 })
