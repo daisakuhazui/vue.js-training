@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODOリスト</title>
+    <title>TODO List</title>
   </head>
   <body>
     <div id="app">
       <p>
         <input type="text"
-        placeholder="TODOを入力しましょう！"
+        placeholder="Form your TODO!"
         v-model="newItemTitle"
         v-on:keyup.enter="addTodo">
       </p>
-      <button v-on:click="deleteTodo()">チェック済みの項目を削除する</button>
+      <button v-on:click="deleteTodo()">Delete cheked item</button>
       <ul>
         <li v-for="item in items">
           <label>
